@@ -1,392 +1,100 @@
-<<<<<<< HEAD
-# React E-Commerce Project — Beginner to Full App
 
-This repository contains the complete **React e-commerce application** built throughout the course.
-The project is designed to take you from **zero React knowledge** to building a **real, production-style application** using modern React patterns.
+🛒 TechMart - Ecommerce Website
 
----
+A fully functional Ecommerce website built with ReactJS, featuring product listings, cart functionality, and a clean user interface.
 
-## 🤖 CodeRabbit Integration (Required)
+📌 Table of Contents
 
-This project uses **CodeRabbit** to automatically review pull requests and catch bugs, best-practice issues, and improvements.
+🧾 About
 
-### How to Integrate CodeRabbit
+✨ Features
 
-1. Go to **[https://coderabbit.link/pedro](https://coderabbit.link/pedro)**
-2. Install CodeRabbit on your GitHub account
-3. Enable it for this repository
-4. Open a Pull Request
-5. CodeRabbit will automatically:
-   - Review your code
-   - Leave inline comments
-   - Highlight bugs, anti-patterns, and improvements
+📁 Project Structure
 
-> Code reviews are an essential part of real-world development.
-> CodeRabbit simulates having a senior developer reviewing your work.
+🚀 Installation
 
----
+💻 Usage
 
-## 📚 Topics Covered (With Code)
+📦 Deployment
 
----
+📚 Tech Stack
 
-## 1. Project Setup & Tooling
+📄 License
 
-We initialize the project using **Vite**, which provides a fast development environment.
+🧾 About
 
-```bash
-npm create vite@latest
+TechMart is a simple ecommerce platform where users can browse products, add them to a cart, and navigate through different pages.
+The project demonstrates React concepts like components, props, state management, and routing, along with modern frontend best practices.
+
+✨ Features
+
+Display list of products with images, name, price, and description
+
+Add products to cart and manage cart items
+
+Navigation between Home, Products, and Cart pages
+
+Responsive design for desktop and mobile
+
+Easy to extend with backend integration
+
+📁 Project Structure
+TechMart/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Navbar.js
+│   │   ├── ProductCard.js
+│   │   └── Cart.js
+│   ├── pages/
+│   │   ├── Home.js
+│   │   └── Products.js
+│   ├── App.js
+│   ├── index.js
+│   └── styles.css
+├── package.json
+└── README.md
+🚀 Installation
+
+Clone the repository
+
+git clone https://github.com/<your-username>/TechMart.git
+
+Navigate to the project folder
+
+cd TechMart
+
+Install dependencies
+
 npm install
-npm run dev
-```
+💻 Usage
 
-We clean up boilerplate files to start with a minimal structure.
+Run the project locally:
 
----
+npm start
 
-## 2. React Fundamentals
+Open http://localhost:3000
+ in your browser to view the website.
 
-### Components & JSX
+📦 Deployment
 
-Components are functions that return JSX.
+To prepare the project for deployment:
 
-```jsx
-function Button() {
-  return <button>Click me</button>;
-}
-```
+npm run build
 
-JSX allows us to mix JavaScript and HTML-like syntax.
+The build/ folder can be deployed to hosting platforms like Netlify, Vercel, or GitHub Pages.
 
----
+📚 Tech Stack
 
-## 3. Props & Component Communication
+ReactJS – Frontend library
 
-Props allow components to receive data.
+React Router – Page navigation
 
-```jsx
-function Product({ name }) {
-  return <h2>{name}</h2>;
-}
-```
+CSS / TailwindCSS – Styling
 
-Used to make components reusable and dynamic.
+JavaScript (ES6+) – Logic and interactivity
 
----
+📄 License
 
-## 4. State Management with `useState`
-
-State allows components to store and update data.
-
-```jsx
-const [count, setCount] = useState(0);
-
-<button onClick={() => setCount(count + 1)}>+</button>;
-```
-
-We use state for:
-
-- Forms
-- Errors
-- UI updates
-- Cart logic
-
----
-
-## 5. Event Handling
-
-React uses camelCase event handlers.
-
-```jsx
-<input onChange={(e) => setEmail(e.target.value)} />
-```
-
-Used for:
-
-- Form inputs
-- Buttons
-- User interactions
-
----
-
-## 6. Conditional Rendering
-
-Render UI based on conditions.
-
-```jsx
-{
-  error && <p>{error}</p>;
-}
-```
-
-Used for:
-
-- Errors
-- Auth state
-- Cart indicators
-
----
-
-## 7. Authentication Logic (Frontend)
-
-We implement **signup and login logic** using in-memory data and localStorage.
-
-```js
-const user = users.find((u) => u.email === email && u.password === password);
-
-if (!user) {
-  return { success: false, error: "Invalid email or password" };
-}
-```
-
-We intentionally return **generic errors** for security reasons.
-
----
-
-## 8. Persisting Auth State
-
-We store logged-in users in `localStorage`.
-
-```js
-localStorage.setItem("user", JSON.stringify(user));
-```
-
-This allows session persistence on refresh.
-
----
-
-## 9. React Context API
-
-Context allows sharing global state.
-
-```jsx
-export const AuthContext = createContext();
-
-<AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>;
-```
-
-Used for:
-
-- Authentication
-- Cart state
-
----
-
-## 10. Custom Hooks
-
-Custom hooks abstract reusable logic.
-
-```js
-export function useAuth() {
-  return useContext(AuthContext);
-}
-```
-
-This removes repetitive imports and improves readability.
-
----
-
-## 11. Routing with React Router
-
-We define application routes.
-
-```jsx
-<Route path="/" element={<Home />} />
-<Route path="/login" element={<Login />} />
-```
-
-Used for page navigation.
-
----
-
-## 12. Programmatic Navigation
-
-We redirect users using `useNavigate`.
-
-```js
-const navigate = useNavigate();
-navigate("/");
-```
-
-Used after login and error handling.
-
----
-
-## 13. Dynamic Routes & URL Params
-
-Dynamic routes allow variable URLs.
-
-```jsx
-<Route path="/products/:id" element={<ProductDetails />} />
-```
-
-Access params using:
-
-```js
-const { id } = useParams();
-```
-
----
-
-## 14. Side Effects with `useEffect`
-
-Run logic when components render.
-
-```js
-useEffect(() => {
-  fetchProduct();
-}, [id]);
-```
-
-Used for:
-
-- Fetching data
-- Syncing UI with params
-
----
-
-## 15. Handling Loading & Null States
-
-Prevent crashes when data is unavailable.
-
-```jsx
-if (!product) return <h1>Loading...</h1>;
-```
-
-Essential for real-world apps.
-
----
-
-## 16. Product System
-
-We render products dynamically.
-
-```jsx
-products.map((product) => <ProductCard key={product.id} product={product} />);
-```
-
-Each product has:
-
-- ID
-- Name
-- Price
-- Image
-- Description
-
----
-
-## 17. Cart Context (Global State)
-
-Cart items stored as:
-
-```js
-{ id: 2, quantity: 3 }
-```
-
-Cart state lives in Context so it’s accessible everywhere.
-
----
-
-## 18. Adding Items to Cart
-
-Prevent duplicate entries.
-
-```js
-if (existingItem) {
-  quantity += 1;
-} else {
-  add new item
-}
-```
-
-State updates are immutable.
-
----
-
-## 19. Updating Cart Quantities
-
-We update items using `map`.
-
-```js
-cartItems.map((item) =>
-  item.id === id ? { ...item, quantity: item.quantity + 1 } : item,
-);
-```
-
----
-
-## 20. Removing Items from Cart
-
-Remove items using `filter`.
-
-```js
-cartItems.filter((item) => item.id !== id);
-```
-
----
-
-## 21. Checkout Page
-
-Displays:
-
-- Cart items
-- Quantity controls
-- Total price
-
-```js
-const total = cartItems.reduce((sum, item) => {
-  return sum + item.price * item.quantity;
-}, 0);
-```
-
----
-
-## 22. Placing an Order (Mock)
-
-Simulates checkout.
-
-```js
-alert("Order placed!");
-clearCart();
-```
-
-Used to demonstrate full flow.
-
----
-
-## 23. Accessibility & Best Practices
-
-- Keys in lists
-- Avoiding span buttons
-- Cleaning console logs
-- Handling edge cases
-
----
-
-## 24. Deployment with Vercel
-
-Deploy the app publicly.
-
-```text
-Vercel → Import GitHub Repo → Deploy
-```
-
-Works for any React app, not just Next.js.
-
----
-
-## 🎯 Learning Outcome
-
-After finishing this project, you can:
-
-- Build React apps from scratch
-- Manage complex UI state
-- Use Context & custom hooks
-- Implement routing and auth flows
-- Build real-world features
-- Deploy production apps
-
----
-=======
-# E-commerce_web
->>>>>>> 66640e662c47e18ffe0775cc89f7f39971b12ee1
+This project is open-source and free to use for personal or educational purposes.
