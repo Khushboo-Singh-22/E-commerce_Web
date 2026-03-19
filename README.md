@@ -1,100 +1,94 @@
+🛒 TechMart (React)
 
-🛒 TechMart - Ecommerce Website
+A modern and interactive Ecommerce Website built using React.js. Browse products, add them to the cart, and enjoy a smooth shopping experience.
 
-A fully functional Ecommerce website built with ReactJS, featuring product listings, cart functionality, and a clean user interface.
+🚀 Live Demo
 
-📌 Table of Contents
+(Add your deployed link here if available)
 
-🧾 About
+Example: https://your-project-link.com
 
-✨ Features
+📌 Features
 
-📁 Project Structure
+🛍️ Browse products with images, price, and description
+🛒 Add and remove products from the cart
+🔄 Navigation between Home, Products, and Cart pages
+📱 Responsive design for mobile and desktop
+⚡ Fast UI using React
+🛠️ Built With
 
-🚀 Installation
+🛠️ Built With
 
-💻 Usage
+React.js
 
-📦 Deployment
+JavaScript (ES6+)
 
-📚 Tech Stack
+CSS / TailwindCSS
 
-📄 License
+Vite / Create React App (whichever you used)
 
-🧾 About
-
-TechMart is a simple ecommerce platform where users can browse products, add them to a cart, and navigate through different pages.
-The project demonstrates React concepts like components, props, state management, and routing, along with modern frontend best practices.
-
-✨ Features
-
-Display list of products with images, name, price, and description
-
-Add products to cart and manage cart items
-
-Navigation between Home, Products, and Cart pages
-
-Responsive design for desktop and mobile
-
-Easy to extend with backend integration
-
-📁 Project Structure
-TechMart/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── Navbar.js
-│   │   ├── ProductCard.js
-│   │   └── Cart.js
-│   ├── pages/
-│   │   ├── Home.js
-│   │   └── Products.js
-│   ├── App.js
+📂 Project Structure
+TechMart
+│
+├── public
+├── src
+│   ├── components
+│   │   ├── Navbar.jsx
+│   │   ├── ProductCard.jsx
+│   │   └── Cart.jsx
+│   ├── pages
+│   │   ├── Home.jsx
+│   │   └── Products.jsx
+│   ├── App.jsx
 │   ├── index.js
 │   └── styles.css
 ├── package.json
 └── README.md
-🚀 Installation
+⚙️ Installation & Setup
 
-Clone the repository
+1️⃣ Clone the repository
 
 git clone https://github.com/<your-username>/TechMart.git
 
-Navigate to the project folder
+2️⃣ Go to project folder
 
 cd TechMart
 
-Install dependencies
+3️⃣ Install dependencies
 
 npm install
-💻 Usage
 
-Run the project locally:
+4️⃣ Run the project
 
-npm start
+npm run dev
 
 Open http://localhost:3000
- in your browser to view the website.
+ in your browser.
 
-📦 Deployment
+🎯 How to Use
 
-To prepare the project for deployment:
+Browse products on the Home or Products page
 
-npm run build
+Click Add to Cart to add products to your cart
 
-The build/ folder can be deployed to hosting platforms like Netlify, Vercel, or GitHub Pages.
+Open Cart to see added products
 
-📚 Tech Stack
+Remove items from the cart if needed
 
-ReactJS – Frontend library
+Responsive design works smoothly on mobile and desktop
 
-React Router – Page navigation
+📸 Screenshots
 
-CSS / TailwindCSS – Styling
+(Add screenshots of your website here)
 
-JavaScript (ES6+) – Logic and interactivity
+👩‍💻 Author
 
-📄 License
+Khushboo Singh
 
-This project is open-source and free to use for personal or educational purposes.
+GitHub: https://github.com/Khushboo-Singh-22
+
+LinkedIn: www.linkedin.com/in/khushboo-s-singh
+
+⭐ Support
+
+If you like this project, please give it a ⭐ on GitHub!
