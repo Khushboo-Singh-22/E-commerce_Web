@@ -5,8 +5,7 @@ A modern and interactive Ecommerce Website built using React.js. Browse products
 🚀 Live Demo
 
 (Add your deployed link here if available)
-
-Example: https://your-project-link.com
+ https://khushboo-singh-22.github.io/E-commerce_Web/
 
 📌 Features
 
